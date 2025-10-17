@@ -126,9 +126,9 @@ We also want to store this extra information in the email.
 
 Fortunately, MailQuery has a mechanism for that : "add_attribute(att_name,fn)" 
 
-    add_attribute() works like a filter. But it always returns True. It never removes anything from the mailbox.
+`add_attribute()` works like a filter. But it always returns True. It never removes anything from the mailbox.
 
-What it DOES do is transform the email in some way. The function fn needs to be a function that maps emails to some other value att_name is a string . The add_attribute filter calls f on each mail passing through, and stores the result in an extra attribute under the name att_name
+What it DOES do is transform the email in some way. The function `fn` needs to be a function that maps emails to some other value. `att_name` is a string . The `add_attribute` filter calls f on each mail passing through, and stores the result in an extra attribute under the name `att_name`
 
 For example, we can use Beautiful Soup to extract text from the html like this.
 
